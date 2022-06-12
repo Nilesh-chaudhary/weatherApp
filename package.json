@@ -1,0 +1,19 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "a weather app with express and node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nilesh-chaudhary/weatherApp.git"
+  },
+  "author": "Nilesh chaudhary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nilesh-chaudhary/weatherApp/issues"
+  },
+  "homepage": "https://github.com/Nilesh-chaudhary/weatherApp#readme"
+}
