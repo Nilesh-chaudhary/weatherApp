@@ -1,8 +1,17 @@
 const express = require('express');
 
 const app = express();
+const path = require('path')
 const port = process.env.PORT || 8000; // USABLE WHEN DEPLOYED OR HOSTED
 
+//static path
+
+const staticPath = path.join(__dirname,'../public')
+// console.log(staticPath)
+
+app.use(express.static(staticPath));
+
+//routing
 app.get("/",(req,res) => {
     res.send("A Weather App!")
 });
