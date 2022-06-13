@@ -26,11 +26,11 @@
                         <p id="day">Tuesday</p>
                         <p id="today_date">13 OCT</p>
                     </div>
-                    <div class="main_layer">
+                    <div class="main_layer ">
                         <p id="city_name">Get Output here</p>
-                        <div class="middle_layer data_hide">
-                            <p id="temp"><span>0</span><sup>o</sup>C</p>
-                            <p id="temp_status"><i class="fa-solid fa-cloud"></i></p>
+                        <div class="middle_layer  ">
+                            <p id="temp"><span id="temp_real_val">0</span><sup>o</sup>C</p>
+                            <p id="temp_status"><i class="fa-solid fa-cloud" style="color:rgb(0, 121, 213)"></i></p>
 
                         </div>
                     </div>
@@ -44,6 +44,41 @@
     {{>footer}}
 
     <script src="js/main.js"></script>
+    <script>
+        
+        const getCurrentDay = () => {
+            let weekday = new Array(7);
+            weekday[0] = "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thurday";
+            weekday[5] = "Friday";
+            weekday[6] = "Saturday";
+
+            let currentTime = new Date();
+            days = weekday[currentTime.getDay()];
+            let day = document.getElementById('day');
+            day.innerText = days;
+        };
+
+        const getCurrentTime = () => {
+            var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"];
+            var now = new Date;
+            var hrs = now.getHours();
+            var mins = now.getMinutes();
+
+            var month = months[now.getMonth() + 1];
+            var date = now.getDate();
+
+            let today = document.getElementById("today_date");
+            today.innerText = `${date} ${month}`
+
+        }
+        getCurrentTime();
+
+        getCurrentDay();
+    </script>
 
     {{!-- all scripts links --}}
     {{>scriptslinks}}
